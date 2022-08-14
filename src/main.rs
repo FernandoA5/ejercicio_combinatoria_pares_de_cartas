@@ -14,18 +14,24 @@ fn main() {
     
     for i in 0..mazo.len(){
         let c1 = String::from(mazo[i].carta.to_string());
+        let t1 = String::from(mazo[i].tipo.to_string());
         for j in (i+1)..mazo.len(){
             let c2 = String::from(mazo[j].carta.to_string());
+            let t2 = String::from(mazo[j].tipo.to_string());
             for k in (j+1)..mazo.len(){
                 let c3 = String::from(mazo[k].carta.to_string());
+                let t3 = String::from(mazo[k].tipo.to_string());
                 for l in (k+1)..mazo.len(){
                     let c4 = String::from(mazo[l].carta.to_string());
+                    let t4 = String::from(mazo[l].tipo.to_string());
                     for m in (l+1)..mazo.len()
                     {                                                   
                         let c5 = String::from(mazo[m].carta.to_string());
+                        let t5 = String::from(mazo[m].tipo.to_string());
                         if detectar_pares(c1.clone(),c2.clone(),c3.clone(),c4.clone(),c5.clone())
                         {
                             dos_pares+=1;
+                            println!("Mano: {}{} | {}{} | {}{} | {}{} | {}{}", c1,t1,c2,t2,c3,t3,c4,t4,c5,t5);
                         }
                         
                         combinacion+=1;          
